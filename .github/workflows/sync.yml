@@ -48,6 +48,7 @@ jobs:
         git config --local user.name Robot
         git config --local user.email Robot@users.noreply.github.com
         SYNC_VERSIONS=SYNC_VERSIONS.md
+        export DOCKER_CLI_EXPERIMENTAL=enabled
         for t in `git --git-dir ./sync_project/.git tag -l | grep "^v[0-9]*\.[0-9]*\.[0-9]*$"`
         do
           if [ -z "`cat ${SYNC_VERSIONS} | grep $t`" ]; then
