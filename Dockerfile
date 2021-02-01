@@ -1,2 +1,2 @@
-ARG TARGETARCH
-FROM quay.io/calico/kube-controllers:${IMAGE_TAG}-${TARGETARCH}
+ARG IMAGE_TAG
+FROM calico/kube-controllers:${IMAGE_TAG}
