@@ -45,3 +45,4 @@
 ## Released Version
 * v3.10.0
 * v3.10.1
+* v3.10.2
