@@ -42,4 +42,4 @@
 * v3.1.6
 * v3.1.7
 
-## Released * version
+## Released Version
