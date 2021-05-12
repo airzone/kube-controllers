@@ -38,7 +38,7 @@ jobs:
         echo ::set-output name=image_repo::${{ secrets.DOCKER_USERNAME }}/kube-controllers
         echo ::set-output name=platforms::linux/amd64,linux/arm64
     - name: Login to DockerHub
-      uses: docker/login-action@v1
+      uses: docker/login-action@v1.9.0
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
