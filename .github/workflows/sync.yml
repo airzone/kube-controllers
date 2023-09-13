@@ -23,12 +23,12 @@ jobs:
         path: 'sync_project'
 
     - name: Set up QEMU
-      uses: docker/setup-qemu-action@v1
+      uses: docker/setup-qemu-action@v2
       with:
         platforms: all
     - name: Set up Docker Buildx
       id: buildx
-      uses: docker/setup-buildx-action@v1
+      uses: docker/setup-buildx-action@v2
     - name: Available platforms
       run: echo Available platforms [${{ steps.buildx.outputs.platforms }}]
 
@@ -38,7 +38,7 @@ jobs:
         echo ::set-output name=image_repo::${{ secrets.DOCKER_USERNAME }}/kube-controllers
         echo ::set-output name=platforms::linux/amd64,linux/arm64
     - name: Login to DockerHub
-      uses: docker/login-action@v1
+      uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
